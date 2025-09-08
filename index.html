@@ -5,10 +5,31 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="Leoson Hoay - Data Scientist, Analytics Engineer, and Consultant specializing in causal inference, machine learning, and public health analytics. MS Computer Science from Georgia Tech, MA Computational Social Science from University of Chicago.">
+  <meta name="author" content="Leoson Hoay">
+  <meta name="keywords" content="data science, analytics engineer, machine learning, causal inference, computational social science, public health, consultant, computer vision, NLP">
 
   <title>Leoson Hoay</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://leosonh.github.io/">
+  <meta property="og:title" content="Leoson Hoay - Data Scientist & Analytics Engineer">
+  <meta property="og:description" content="Data Scientist, Analytics Engineer, and Consultant specializing in causal inference, machine learning, and public health analytics. MS Computer Science from Georgia Tech, MA Computational Social Science from University of Chicago.">
+  <meta property="og:image" content="https://leosonh.github.io/img/profile.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://leosonh.github.io/">
+  <meta property="twitter:title" content="Leoson Hoay - Data Scientist & Analytics Engineer">
+  <meta property="twitter:description" content="Data Scientist, Analytics Engineer, and Consultant specializing in causal inference, machine learning, and public health analytics. MS Computer Science from Georgia Tech, MA Computational Social Science from University of Chicago.">
+  <meta property="twitter:image" content="https://leosonh.github.io/img/profile.png">
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -17,7 +38,7 @@
   <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
   <!-- Custom styles for this template -->
   <link href="css/resume.min.css" rel="stylesheet">
@@ -26,11 +47,22 @@
 
 <body id="page-top">
 
+  <!-- Loading Animation -->
+  <div class="page-loading" id="page-loading">
+    <div class="loader"></div>
+  </div>
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
       <span class="d-block d-lg-none">Leoson Hoay</span>
       <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.png" alt="">
+        <!-- Dark Mode Toggle - Above Profile -->
+        <div class="theme-toggle-above-profile mb-3">
+          <button id="theme-toggle" class="btn btn-outline-light btn-sm" aria-label="Toggle dark mode">
+            <i class="fas fa-moon" id="theme-icon"></i>
+          </button>
+        </div>
+        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.png" alt="Leoson Hoay - Professional headshot">
       </span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -446,6 +478,11 @@
 
 
   </div>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
