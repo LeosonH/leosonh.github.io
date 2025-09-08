@@ -4,6 +4,256 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-resume/blob/master/LICENSE)
  */
 
+/* Chatbot Styles */
+#chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10000;
+  font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  pointer-events: auto;
+}
+
+#chatbot-toggle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--primary-color, #bd5d38);
+  color: white;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  font-size: 24px;
+  position: relative;
+  z-index: 10001;
+}
+
+#chatbot-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+#chatbot-window {
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  width: 350px;
+  height: 500px;
+  background-color: var(--bg-color, #ffffff);
+  border: 1px solid var(--border-color, #e9ecef);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chatbot-open #chatbot-window {
+  display: flex;
+}
+
+.chatbot-open #chatbot-toggle i {
+  transform: rotate(45deg);
+}
+
+#chatbot-header {
+  background-color: var(--primary-color, #bd5d38);
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#chatbot-header h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: none;
+  color: white;
+}
+
+#chatbot-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+#chatbot-close:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#chatbot-messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: var(--bg-color, #ffffff);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.chatbot-message {
+  max-width: 80%;
+  padding: 10px 14px;
+  border-radius: 18px;
+  font-size: 14px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.chatbot-message.user {
+  align-self: flex-end;
+  background-color: var(--primary-color, #bd5d38);
+  color: white;
+  border-bottom-right-radius: 6px;
+}
+
+.chatbot-message.bot {
+  align-self: flex-start;
+  background-color: var(--message-bg, #f8f9fa);
+  color: var(--text-color, #333333);
+  border-bottom-left-radius: 6px;
+  border: 1px solid var(--border-color, #e9ecef);
+}
+
+.chatbot-message.loading {
+  background-color: var(--message-bg, #f8f9fa);
+  color: var(--text-color, #666666);
+  font-style: italic;
+}
+
+#chatbot-input-container {
+  display: flex;
+  padding: 15px 20px;
+  background-color: var(--bg-color, #ffffff);
+  border-top: 1px solid var(--border-color, #e9ecef);
+  align-items: center;
+  gap: 10px;
+}
+
+#chatbot-input {
+  flex: 1;
+  border: 1px solid var(--border-color, #e9ecef);
+  border-radius: 20px;
+  padding: 10px 15px;
+  font-size: 14px;
+  outline: none;
+  background-color: var(--input-bg, #ffffff);
+  color: var(--text-color, #333333);
+  transition: border-color 0.2s ease;
+}
+
+#chatbot-input:focus {
+  border-color: var(--primary-color, #bd5d38);
+}
+
+#chatbot-send {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--primary-color, #bd5d38);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+#chatbot-send:hover:not(:disabled) {
+  background-color: var(--primary-hover, #a54e30);
+}
+
+#chatbot-send:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+#chatbot-settings {
+  padding: 15px 20px;
+  background-color: var(--settings-bg, #f8f9fa);
+  border-top: 1px solid var(--border-color, #e9ecef);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#api-provider, #api-key {
+  padding: 8px 12px;
+  border: 1px solid var(--border-color, #e9ecef);
+  border-radius: 6px;
+  font-size: 13px;
+  background-color: var(--input-bg, #ffffff);
+  color: var(--text-color, #333333);
+}
+
+#save-api-key {
+  padding: 6px 12px;
+  background-color: var(--primary-color, #bd5d38);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.2s ease;
+}
+
+#save-api-key:hover {
+  background-color: var(--primary-hover, #a54e30);
+}
+
+.chatbot-closed #chatbot-window {
+  display: none;
+}
+
+/* Ensure chatbot is always visible */
+#chatbot-container {
+  visibility: visible !important;
+  display: block !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  #chatbot-container {
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+  }
+  
+  #chatbot-window {
+    width: calc(100vw - 40px);
+    height: 60vh;
+    bottom: 80px;
+    right: -10px;
+  }
+  
+  #chatbot-toggle {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
+
+/* For large screens - ensure it's not hidden by sidebar */
+@media (min-width: 992px) {
+  #chatbot-container {
+    right: 20px;
+    bottom: 20px;
+    z-index: 10000;
+  }
+}
+
 body {
   font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segue UI Symbol', 'Noto Color Emoji';
   padding-top: 54px;
