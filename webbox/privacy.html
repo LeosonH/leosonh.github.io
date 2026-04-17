@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — WebBox Element Editor</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0f172a;
+      color: #cbd5e1;
+      line-height: 1.7;
+      padding: 48px 24px 80px;
+    }
+
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* ── Header ── */
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 48px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .logo {
+      width: 40px; height: 40px;
+      background: #1e40af;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .logo svg { width: 22px; height: 22px; }
+
+    .header-text h1 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #f1f5f9;
+      letter-spacing: -0.02em;
+    }
+
+    .header-text p {
+      font-size: 13px;
+      color: #475569;
+      margin-top: 2px;
+    }
+
+    /* ── Sections ── */
+    .section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #7dd3fc;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 15px;
+      color: #94a3b8;
+      margin-bottom: 10px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      margin: 8px 0;
+    }
+
+    ul li {
+      font-size: 15px;
+      color: #94a3b8;
+      padding: 6px 0 6px 20px;
+      position: relative;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    ul li:last-child { border-bottom: none; }
+
+    ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: #334155;
+    }
+
+    .permission-name {
+      font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+      font-size: 12px;
+      background: rgba(59,130,246,0.12);
+      color: #7dd3fc;
+      border: 1px solid rgba(59,130,246,0.2);
+      border-radius: 4px;
+      padding: 1px 6px;
+      margin-right: 6px;
+    }
+
+    .highlight {
+      background: rgba(34,197,94,0.08);
+      border: 1px solid rgba(34,197,94,0.15);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 32px;
+    }
+
+    .highlight p {
+      color: #86efac;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      font-size: 13px;
+      color: #334155;
+    }
+
+    a { color: #3b82f6; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="header">
+      <div class="logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
+             stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="7"/>
+          <line x1="16.5" y1="16.5" x2="22" y2="22"/>
+        </svg>
+      </div>
+      <div class="header-text">
+        <h1>WebBox — Element Editor</h1>
+        <p>Privacy Policy &middot; Last updated April 2026</p>
+      </div>
+    </div>
+
+    <div class="highlight">
+      <p>WebBox currently collects no personal data, sends nothing to any server, and has no analytics or tracking of any kind.</p>
+    </div>
+
+    <div class="section">
+      <h2>Overview</h2>
+      <p>WebBox is a browser extension that lets you inspect and edit elements on any webpage directly — without opening DevTools. All functionality runs entirely within your browser. Nothing you do with the extension is transmitted, logged, or shared.</p>
+    </div>
+
+    <div class="section">
+      <h2>Data We Collect</h2>
+      <p>We collect no data. Specifically:</p>
+      <ul>
+        <li>No browsing history or page content is recorded</li>
+        <li>No edits you make to page elements are stored or transmitted</li>
+        <li>No personal information is collected at any point</li>
+        <li>No analytics, telemetry, or crash reporting is in place</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Local Storage</h2>
+      <p>The only data stored by WebBox is your <strong>mode preference</strong> (Simple or Advanced), saved locally on your device using <code>chrome.storage.local</code>. This preference:</p>
+      <ul>
+        <li>Never leaves your device</li>
+        <li>Is never transmitted to any server</li>
+        <li>Can be cleared at any time by removing the extension</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Permissions</h2>
+      <p>WebBox requests the minimum permissions required to function:</p>
+      <ul>
+        <li>
+          <span class="permission-name">activeTab</span>
+          Allows the extension to inject the editor into the current tab when you click the toolbar button. Access is granted only to the tab you are actively viewing, only when you invoke the extension.
+        </li>
+        <li>
+          <span class="permission-name">scripting</span>
+          Required to inject the editor script and styles into the active tab. No scripts are loaded from external sources — all code is bundled within the extension package.
+        </li>
+        <li>
+          <span class="permission-name">storage</span>
+          Used exclusively to remember your Simple / Advanced mode preference locally on your device.
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Remote Code</h2>
+      <p>WebBox executes no remote code. All JavaScript, CSS, and assets are fully self-contained within the extension package. This complies with Chrome's Manifest V3 requirements and means the extension's behaviour cannot be changed without a published update that you can review.</p>
+    </div>
+
+    <div class="section">
+      <h2>Third Parties</h2>
+      <p>WebBox has no third-party integrations, SDKs, advertising networks, or data brokers. No data is shared with any third party because no data is collected in the first place.</p>
+    </div>
+
+    <div class="section">
+      <h2>Changes to This Policy</h2>
+      <p>If this policy is updated in a future version of the extension, the updated date at the top of this page will reflect the change. Continued use of the extension after an update constitutes acceptance of the revised policy.</p>
+    </div>
+
+    <div class="section">
+      <h2>Contact</h2>
+      <p>If you have any questions about this privacy policy, please reach out at <a href="mailto:leoson.public@gmail.com">leoson.public@gmail.com</a>.</p>
+    </div>
+
+    <div class="footer">
+      &copy; 2026 Leoson Hoay. All rights reserved.
+    </div>
+
+  </div>
+</body>
+</html>
