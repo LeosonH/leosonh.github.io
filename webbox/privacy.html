@@ -147,7 +147,7 @@
       </div>
       <div class="header-text">
         <h1>WebBox — Element Editor</h1>
-        <p>Privacy Policy &middot; Last updated April 2026</p>
+        <p>Privacy Policy &middot; Last updated October 2026</p>
       </div>
     </div>
 
@@ -165,7 +165,7 @@
       <p>We collect no data. Specifically:</p>
       <ul>
         <li>No browsing history or page content is recorded</li>
-        <li>No edits you make to page elements are stored or transmitted</li>
+        <li>No edits you make to page elements are transmitted — they are only stored on your device, and only for sites where you turn on &ldquo;Remember on this site&rdquo;</li>
         <li>No personal information is collected at any point</li>
         <li>No analytics, telemetry, or crash reporting is in place</li>
       </ul>
@@ -173,11 +173,16 @@
 
     <div class="section">
       <h2>Local Storage</h2>
-      <p>The only data stored by WebBox is your <strong>mode preference</strong> (Simple or Advanced), saved locally on your device using <code>chrome.storage.local</code>. This preference:</p>
+      <p>WebBox stores the following locally on your device using <code>chrome.storage.local</code>:</p>
+      <ul>
+        <li>Your <strong>mode preference</strong> (Simple or Advanced)</li>
+        <li>For sites where you turn on <strong>&ldquo;Remember on this site&rdquo;</strong> only: the edits you made on that site's pages and the page theme you chose, so they can be reapplied on your next visit</li>
+      </ul>
+      <p>This data:</p>
       <ul>
         <li>Never leaves your device</li>
         <li>Is never transmitted to any server</li>
-        <li>Can be cleared at any time by removing the extension</li>
+        <li>Can be cleared for a site by turning &ldquo;Remember on this site&rdquo; off, or entirely by removing the extension</li>
       </ul>
     </div>
 
@@ -195,7 +200,11 @@
         </li>
         <li>
           <span class="permission-name">storage</span>
-          Used exclusively to remember your Simple / Advanced mode preference locally on your device.
+          Used to remember your Simple / Advanced mode preference, and the edits and theme for sites you chose to remember, locally on your device.
+        </li>
+        <li>
+          <span class="permission-name">Site access (optional)</span>
+          Requested for a single site only when you turn on &ldquo;Remember on this site&rdquo;, so WebBox can reapply your saved edits and theme when that site loads. Nothing is requested at install. Turning the option off removes the access again, and you can also revoke it at any time from Chrome's extension settings.
         </li>
       </ul>
     </div>
