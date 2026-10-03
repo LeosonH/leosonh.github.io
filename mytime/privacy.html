@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — MyTime</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0f172a;
+      color: #cbd5e1;
+      line-height: 1.7;
+      padding: 48px 24px 80px;
+    }
+
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* ── Header ── */
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 48px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .logo {
+      width: 40px; height: 40px;
+      flex-shrink: 0;
+    }
+
+    .logo svg { display: block; width: 40px; height: 40px; }
+
+    .header-text h1 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #f1f5f9;
+      letter-spacing: -0.02em;
+    }
+
+    .header-text p {
+      font-size: 13px;
+      color: #475569;
+      margin-top: 2px;
+    }
+
+    /* ── Sections ── */
+    .section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #7dd3fc;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 15px;
+      color: #94a3b8;
+      margin-bottom: 10px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      margin: 8px 0;
+    }
+
+    ul li {
+      font-size: 15px;
+      color: #94a3b8;
+      padding: 6px 0 6px 20px;
+      position: relative;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    ul li:last-child { border-bottom: none; }
+
+    ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: #334155;
+    }
+
+    strong { color: #cbd5e1; font-weight: 600; }
+
+    code {
+      font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+      font-size: 13px;
+      color: #cbd5e1;
+    }
+
+    .permission-name {
+      font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+      font-size: 12px;
+      background: rgba(59,130,246,0.12);
+      color: #7dd3fc;
+      border: 1px solid rgba(59,130,246,0.2);
+      border-radius: 4px;
+      padding: 1px 6px;
+      margin-right: 6px;
+    }
+
+    .highlight {
+      background: rgba(34,197,94,0.08);
+      border: 1px solid rgba(34,197,94,0.15);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 32px;
+    }
+
+    .highlight p {
+      color: #86efac;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      font-size: 13px;
+      color: #334155;
+    }
+
+    a { color: #3b82f6; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="header">
+      <div class="logo">
+        <!-- The MyTime icon: the page's time behind, yours in front. -->
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect width="24" height="24" rx="6" fill="#185FA5"/>
+          <circle cx="8.8" cy="9.2" r="5.2" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2"/>
+          <circle cx="14.8" cy="14.8" r="5.6" fill="#185FA5" stroke="#fff" stroke-width="2"/>
+          <path d="M14.8 11.9v2.9l2 1.3" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="header-text">
+        <h1>MyTime — Timezone Converter</h1>
+        <p>Privacy Policy · Last updated October 2026</p>
+      </div>
+    </div>
+
+    <div class="highlight">
+      <p>MyTime collects no personal data, sends nothing to any server, and has no analytics or tracking of any kind.</p>
+    </div>
+
+    <div class="section">
+      <h2>Overview</h2>
+      <p>MyTime is a browser extension that finds times written on the web pages you visit, like “3pm ET” or “14:00 UTC”, and shows them in the timezone you choose. All functionality runs entirely within your browser. Nothing you read or do with the extension is transmitted, logged, or shared.</p>
+    </div>
+
+    <div class="section">
+      <h2>Data We Collect</h2>
+      <p>We collect no data. Specifically:</p>
+      <ul>
+        <li>No browsing history or page content is recorded — page text is read on your device only to find times, and is never stored or sent anywhere</li>
+        <li>No personal information is collected at any point</li>
+        <li>No analytics, telemetry, or crash reporting is in place</li>
+        <li>The extension makes no network requests at all</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Settings Storage</h2>
+      <p>MyTime stores three settings using Chrome's extension storage (<code>chrome.storage.sync</code>):</p>
+      <ul>
+        <li>Whether MyTime is <strong>switched on</strong></li>
+        <li>The <strong>timezone</strong> you chose, or “local time”</li>
+        <li>Your <strong>popup style</strong> (Minimal or Airport)</li>
+      </ul>
+      <p>These settings:</p>
+      <ul>
+        <li>Are never transmitted to any server operated by MyTime or its developer</li>
+        <li>May be synced between your own devices by Chrome, if you have Chrome Sync turned on</li>
+        <li>Can be cleared entirely by removing the extension</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Permissions</h2>
+      <p>MyTime requests only the permissions it needs to work:</p>
+      <ul>
+        <li>
+          <span class="permission-name">storage</span>
+          Used to remember your on/off switch, chosen timezone, and popup style.
+        </li>
+        <li>
+          <span class="permission-name">scripting</span>
+          Used to run MyTime's page script while you have it switched on, including in tabs that were already open when you switched it on. It is removed from new pages when you switch MyTime off. No scripts are loaded from external sources — all code is bundled within the extension package.
+        </li>
+        <li>
+          <span class="permission-name">Site access (all sites)</span>
+          Times appear on any website — emails, event pages, docs, chat — so MyTime needs to read page text wherever you browse to find and convert them, without you clicking on each page. It only reads visible text and rewrites times in place, on your device.
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Remote Code</h2>
+      <p>MyTime executes no remote code. All JavaScript, CSS, and assets are fully self-contained within the extension package. This complies with Chrome's Manifest V3 requirements and means the extension's behaviour cannot be changed without a published update that you can review.</p>
+    </div>
+
+    <div class="section">
+      <h2>Third Parties</h2>
+      <p>MyTime has no third-party integrations, SDKs, advertising networks, or data brokers. No data is shared with any third party because no data is collected in the first place.</p>
+    </div>
+
+    <div class="section">
+      <h2>Changes to This Policy</h2>
+      <p>If this policy is updated in a future version of the extension, the updated date at the top of this page will reflect the change. Continued use of the extension after an update constitutes acceptance of the revised policy.</p>
+    </div>
+
+    <div class="section">
+      <h2>Contact</h2>
+      <p>If you have any questions about this privacy policy, please reach out at <a href="mailto:leoson.public@gmail.com">leoson.public@gmail.com</a>.</p>
+    </div>
+
+    <div class="footer">
+      © 2026 Leoson Hoay. All rights reserved.
+    </div>
+
+  </div>
+</body>
+</html>
