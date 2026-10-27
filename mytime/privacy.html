@@ -180,10 +180,11 @@
 
     <div class="section">
       <h2>Settings Storage</h2>
-      <p>My Time stores three settings using Chrome's extension storage (<code>chrome.storage.sync</code>):</p>
+      <p>My Time stores four settings using Chrome's extension storage (<code>chrome.storage.sync</code>):</p>
       <ul>
         <li>Whether My Time is <strong>switched on</strong></li>
         <li>The <strong>timezone</strong> you chose, or “local time”</li>
+        <li>How times are shown on pages: <strong>underlined</strong> or <strong>replaced</strong></li>
         <li>Your <strong>popup style</strong> (Minimal or Airport)</li>
       </ul>
       <p>These settings:</p>
@@ -200,7 +201,7 @@
       <ul>
         <li>
           <span class="permission-name">storage</span>
-          Used to remember your on/off switch, chosen timezone, and popup style.
+          Used to remember your on/off switch, chosen timezone, display mode, and popup style.
         </li>
         <li>
           <span class="permission-name">scripting</span>
@@ -208,7 +209,7 @@
         </li>
         <li>
           <span class="permission-name">Site access (all sites)</span>
-          Times appear on any website — emails, event pages, docs, chat — so My Time needs to read page text wherever you browse to find and convert them, without you clicking on each page. It only reads visible text and rewrites times in place, on your device.
+          Times appear on any website — emails, event pages, docs, chat — so My Time needs to read page text wherever you browse to find and convert them, without you clicking on each page. It only reads visible text, then underlines times (or rewrites them in place, if you choose), on your device.
         </li>
       </ul>
     </div>
